@@ -29,9 +29,9 @@
 					<div class="col-sm-8">
 				<!-- form begins-->
 				<form role="form" action="/questions" method="POST">
-					<!-- {% csrf_token %} -->
+					{% csrf_token %}
 					<div class="form-group">
-						<input type="text" class="form-control" name="location" placeholder="Enter the User Name"/>                                       
+						<input type="text" class="form-control" name="content" placeholder="Enter the User Name"/>                                       
 					</div>
 					
 

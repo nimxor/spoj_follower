@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+# from follower import views
+
+app_name = 'follower'
 
 urlpatterns = [
     url(r'^', include('follower.urls')),
     url(r'^admin/', admin.site.urls),
+    # url(r'^input$', views.take_input, name = "take_input"),
 ]
