@@ -17,6 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^spoj_follower/', include('follower.urls')),
+    url(r'^', include('follower.urls')),
     url(r'^admin/', admin.site.urls),
 ]
