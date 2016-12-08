@@ -10,16 +10,19 @@ import requests
 import urllib
 from bs4 import BeautifulSoup
 import re
+import collections
 
 
 
 def index(request):
 	if request.method == "POST":
 		content = request.POST['content']
-		url = 'http://www.spoj.com/users/shubham190496/'
+		print content
+		url = 'http://www.spoj.com/users/' + content + '/'
 		html = urllib.urlopen(url).read()
 
 		soup = BeautifulSoup(html,"html.parser")
+		print soup
 
 		table = soup.find('table',attrs={'class':'table table-condensed'})
 
@@ -42,11 +45,16 @@ def index(request):
 					STR = str(entry.get_text()).strip()
 					if STR=="accepted":
 						fin = str(row.find('td',attrs={'class':'status_sm'}).get_text()).strip()
-						ar.append([fin,P])
+						ar.append((fin,P))
 						break
 
 		ar.sort()
-		context={"post_list" : ar}
+		ar = tuple(ar)
+		print ar
+		ar = collections.OrderedDict(ar)
+		context={"post_list" : ar,
+				 "user_name" : content,
+		}
 		return render(request,"questions.html",context)
 	else:
 		context = {}

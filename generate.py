@@ -5,7 +5,7 @@ import requests
 import urllib
 from bs4 import BeautifulSoup
 
-url = 'http://www.spoj.com/users/rishiv30/'
+url = 'http://www.spoj.com/users/shubham190496/'
 html = urllib.urlopen(url).read()
 
 

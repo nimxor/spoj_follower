@@ -29,17 +29,15 @@ for ptag in tags.find_all('a'):
 	ss = time[3:-2]
 	p = ss.split(' ')
 	print ss
-	# print([p[0],p[1],problem_title,s])
-	# print problem_title + "->" + s
-	# l.append([p[0],p[1],problem_title,s])
-	# print 
-	# print he
-		# text = ttd.text.replace('&nbsp;', '').lstrip()
-  #       print text
+	print([p[0],p[1],problem_title,s])
+	print problem_title + "->" + s
+	l.append([p[0],p[1],problem_title,s])
+	# text = ttd.text.replace('&nbsp;', '').lstrip()
+	# print text
 
 
 
 	# st = http://www.spoj.com/status/CASHIER,xilinx/
 
-# for link in l:
-# 	print link
+for link in l:
+	print link
