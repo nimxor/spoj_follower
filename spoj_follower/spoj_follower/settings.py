@@ -26,7 +26,7 @@ SECRET_KEY = '!pfn)t!i9z6)_mpujx2=6)2%bty91h%9zw^u1*-lz+w-bj%inc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['spoj-follower.herokuapp.com'] 
 
 
 # Application definition
@@ -124,8 +124,6 @@ STATIC_URL = '/static/'
 DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-ALLOWED_HOSTS = ['*']
 
 DEBUG = False
 
